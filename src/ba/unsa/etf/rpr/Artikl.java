@@ -16,5 +16,4 @@ public class Artikl {
     public int getCijena(){
         return cijenaArtikla;
     }
-
 }
