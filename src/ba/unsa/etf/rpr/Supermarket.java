@@ -3,11 +3,11 @@ package ba.unsa.etf.rpr;
 import java.util.ArrayList;
 
 public class Supermarket {
-    Artikl[] artikli = new Artikl[50];
+    Artikl[] artikli = new Artikl[1000];
     int duzinaArtikli = 0;
 
     public boolean dodajArtikl(Artikl a){
-        if(duzinaArtikli<50){
+        if(duzinaArtikli<1000){
             artikli[duzinaArtikli]=a;
             duzinaArtikli++;
             return true;

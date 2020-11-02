@@ -1,6 +1,5 @@
 package ba.unsa.etf.rpr;
 
-import java.util.ArrayList;
 
 public class Korpa {
     Artikl[] artikli = new Artikl[50];
