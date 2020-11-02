@@ -14,7 +14,11 @@ class KorpaTest {
         Artikl a = new Artikl("Sveska", 2, "svs");
         assertEquals(a.getKod(),artikl.getKod());
     }
-
+    @Test
+    void test2(){
+        Korpa korpa = new Korpa();
+        assertTrue(korpa.dodajArtikl(new Artikl("Mobitel", 500, "mob")));
+    }
     @Test
     void ukupnaCijena(){
         Korpa korpa = new Korpa();

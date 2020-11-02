@@ -13,5 +13,10 @@ class SupermarketTest {
         Artikl a = supermarket.izbaciArtiklSaKodom("sk");
         assertEquals("sk",a.getKod());
     }
+    @Test
+    void test2() {
+        Supermarket supermarket = new Supermarket();
+        assertTrue(supermarket.dodajArtikl(new Artikl("Auto", 15000, "audi")));
+    }
 
 }
