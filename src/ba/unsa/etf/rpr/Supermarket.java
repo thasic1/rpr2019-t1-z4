@@ -3,24 +3,34 @@ package ba.unsa.etf.rpr;
 import java.util.ArrayList;
 
 public class Supermarket {
-    ArrayList<Artikl> artikli = new ArrayList<Artikl>();
-    public void dodajArtikl(Artikl a){
-        if(artikli.size()<50){
-            artikli.add(a);
+    Artikl[] artikli = new Artikl[50];
+    int duzinaArtikli = 0;
+
+    public boolean dodajArtikl(Artikl a){
+        if(duzinaArtikli<50){
+            artikli[duzinaArtikli]=a;
+            duzinaArtikli++;
+            return true;
         }
+        return false;
     }
+
     public Artikl izbaciArtiklSaKodom(String kod){
-        for(int i=0;i<artikli.size();i++){
-            if(kod.equals(artikli.get(i).getKod())){
-                Artikl tmp = artikli.get(i);
-                artikli.remove(i);
+        for(int i=0;i<duzinaArtikli;i++){
+            if(kod.equals(artikli[i].getKod())){
+                Artikl tmp = artikli[i];
+                for(int j=i;j<duzinaArtikli-1;j++){
+                    artikli[j]=artikli[j+1];
+                }
+                duzinaArtikli--;
+                artikli[duzinaArtikli-1]=null;
                 return tmp;
             }
         }
         return null;
     }
 
-    public ArrayList<Artikl> getArtikli() {
+    public Artikl[] getArtikli() {
         return artikli;
     }
 }
