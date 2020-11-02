@@ -18,5 +18,13 @@ class SupermarketTest {
         Supermarket supermarket = new Supermarket();
         assertTrue(supermarket.dodajArtikl(new Artikl("Auto", 15000, "audi")));
     }
+    @Test
+    void test3(){
+       Supermarket supermarket = new Supermarket();
+        supermarket.dodajArtikl(new Artikl("Sveska", 2, "svs"));
+        supermarket.dodajArtikl(new Artikl("Olovka", 1, "olv"));
+        Artikl a = supermarket.izbaciArtiklSaKodom("pp");
+        assertNull(a);
+    }
 
 }
