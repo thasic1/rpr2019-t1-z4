@@ -19,11 +19,11 @@ public class Korpa {
         for(int i=0;i<duzinaArtikli;i++){
             if(kod.equals(artikli[i].getKod())){
                 Artikl tmp = artikli[i];
-                for(int j=i;j<duzinaArtikli-1;j++){
+                for(int j=i;j<duzinaArtikli;j++){
                     artikli[j]=artikli[j+1];
                 }
                 duzinaArtikli--;
-                artikli[duzinaArtikli-1]=null;
+                artikli[duzinaArtikli]=null;
                 return tmp;
             }
         }
